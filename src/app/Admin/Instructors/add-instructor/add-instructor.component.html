@@ -1,0 +1,144 @@
+<app-navbar></app-navbar>
+<app-aside></app-aside>
+<main id="main" class="main">
+  <h3 class="text-center text-white-50 fw-bold my-5">Add New Instructor</h3>
+  <div class="container col-md-12 col-lg-10 mt-5">
+    <!-- <div class="alert alert-success text-center fw-bold alert-dismissible fade show" role="alert">
+        
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div> -->
+
+    <div class="card bg-dark">
+      <div class="row">
+        <div class="col-md-4">
+          <input
+            [(ngModel)]="username"
+            type="text"
+            name="username"
+            placeholder="User Name"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-4">
+          <input
+            [(ngModel)]="email"
+            type="email"
+            name="email"
+            placeholder="First Name"
+            class="form-control my-2"
+          />
+        </div>
+
+        <div class="col-md-4">
+          <input
+            [(ngModel)]="password"
+            type="password"
+            name="password"
+            placeholder="Instructor Password"
+            class="form-control my-2"
+          />
+        </div>
+
+        <div class="col-md-4">
+          <input
+            [(ngModel)]="first_name"
+            type="email"
+            name="first_name"
+            placeholder="First Name"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-4">
+          <input
+            [(ngModel)]="second_name"
+            type="text"
+            name="second_name"
+            placeholder="Second Name"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-4">
+          <input
+            [(ngModel)]="third_name"
+            type="text"
+            name="third_name"
+            placeholder="Third Name"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-6">
+          <input
+            [(ngModel)]="fourth_name"
+            type="text"
+            name="fourth_name"
+            placeholder="Fourth Name"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-6">
+          <input
+            [(ngModel)]="last_name"
+            type="text"
+            name="last_name"
+            placeholder="Last Name"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-4">
+          <input
+            [(ngModel)]="city"
+            type="text"
+            name="city"
+            placeholder="Instructor City"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-4">
+          <input
+            [(ngModel)]="address"
+            type="text"
+            name="address"
+            placeholder="Instructor Address"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-4">
+          <input
+            [(ngModel)]="phone"
+            type="text"
+            maxlength="15"
+            name="phone"
+            placeholder="Instructor Phone"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-6">
+          <input
+            [(ngModel)]="birth_date"
+            type="date"
+            name="birth_date"
+            placeholder="Instructor Birth Date"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-6 mt-2">
+          <select name="gender" [(ngModel)]="gender" class="form-control my-2">
+            <option selected disabled>Choice Gender</option>
+            <option value="m">Male</option>
+            <option value="f">Female</option>
+          </select>
+        </div>
+        <div class="d-grid">
+          <button
+            (click)="addInstructor()"
+            class="btn btn-outline-secondary rounded-pill my-2 fs-5 fw-bold"
+            name="send"
+          >
+            Add Instructor
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- End #main -->

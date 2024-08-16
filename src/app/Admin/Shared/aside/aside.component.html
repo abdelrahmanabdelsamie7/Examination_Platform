@@ -1,0 +1,77 @@
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+  <ul class="sidebar-nav" id="sidebar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/Admin_Page">
+        <i class="bi fs-5 bi-grid"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <!-- End Dashboard Nav -->
+
+    <li class="nav-heading">Pages</li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" routerLink="/Admin_Profile">
+        <i class="bi fs-5 bi-person"></i>
+        <span>Profile</span>
+      </a>
+    </li>
+    <!-- End Profile Page Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" routerLink="/Admins">
+       <i class="fa-solid fa-lock"></i>
+        <span>Admins</span>
+      </a>
+    </li>
+    <!-- End F.A.Q Page Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" routerLink="/Instructors">
+        <i class="fa-solid fa-person-chalkboard"></i>
+        <span>Instructors</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="<?= url('rules/') ?>">
+       <i class="fa-solid fs-5 fa-chalkboard-user"></i>
+        <span>Rules</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href='<?= url("pages-contact.php") ?>'>
+        <i class="bi fs-5 bi-envelope"></i>
+        <span>Contact</span>
+      </a>
+    </li>
+    <!-- End Contact Page Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href='<?= url( "pages-register.php") ?>'>
+        <i class="bi bi-card-list"></i>
+        <span>Register</span>
+      </a>
+    </li>
+    <!-- End Register Page Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href='<?= url( "pages-login.php") ?>'>
+        <i class="bi bi-box-arrow-in-right"></i>
+        <span>Login</span>
+      </a>
+    </li>
+    <!-- End Login Page Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href='<?= url("pages-error-404.php") ?>'>
+        <i class="bi bi-dash-circle"></i>
+        <span>Error 404</span>
+      </a>
+    </li>
+    <!-- End Error 404 Page Nav -->
+  </ul>
+</aside>
+<!-- End Sidebar-->

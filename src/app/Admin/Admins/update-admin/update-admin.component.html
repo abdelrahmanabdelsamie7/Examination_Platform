@@ -1,0 +1,192 @@
+<app-navbar></app-navbar>
+<app-aside></app-aside>
+<main id="main" class="main">
+  <div class="pagetitle">
+    <h1>Profile</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"></li>
+        <li class="breadcrumb-item">Users</li>
+        <li class="breadcrumb-item active">Profile</li>
+      </ol>
+    </nav>
+  </div>
+  <!-- End Page Title -->
+
+  <section class="section profile">
+    <div class="row">
+      <div class="col-xl-4">
+        <div class="card">
+          <!-- <div
+            class="alert alert-success text-center fw-bold alert-dismissible fade show"
+            role="alert"
+          >
+       
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="alert"
+              aria-label="Close"
+            ></button>
+          </div> -->
+
+          <div
+            class="card-body profile-card pt-4 d-flex flex-column align-items-center"
+          >
+            <img
+              src="../../../../assets/Images/pngwing.com.png"
+              class="img-thumbnail border border-dark"
+            />
+
+            <h2></h2>
+            <h3></h3>
+            <div class="social-links mt-2">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-8">
+        <div class="card">
+          <div class="card-body pt-3">
+            <!-- Bordered Tabs -->
+            <ul class="nav nav-tabs nav-tabs-bordered">
+              <li class="nav-item">
+                <button
+                  routerLink="/Admin_Profile"
+                  class="nav-link text-light active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#profile-overview"
+                >
+                  Overview
+                </button>
+              </li>
+              <!-- <li class="nav-item">
+                <button
+                routerLink="/edit"
+                  class="nav-link text-light"
+                  data-bs-toggle="tab"
+                  data-bs-target="#profile-edit"
+                >
+                  Edit Profile
+                </button>
+              </li> -->
+            </ul>
+            <div class="tab-content pt-2">
+              <div class="">
+                <h3 class="fs-5 p-4">Edit Profile</h3>
+                <div class="container col-md-12 col-lg-10 mt-1">
+                  <div class="card px-5 py-3">
+                    <?php if ($msg != null): ?>
+                    <div
+                      class="alert alert-success text-center fw-bold alert-dismissible fade show"
+                      role="alert"
+                    >
+                      <?= $msg; ?>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <?php endif; ?>
+                    <form method="post" enctype="multipart/form-data">
+                      <div class="row mb-3 bg-white-50 d-block mx-auto">
+                        <label
+                          for="profileImage"
+                          class="col-md-4 col-lg-3 col-form-label text-light"
+                          >Profile Image</label
+                        >
+                        <div class="col-md-8 col-lg-9">
+                          <div class="pt-2 col-md-4">
+                            <input
+                              type="file"
+                              accept="admin_image/*"
+                              name="admin_image"
+                              class="btn btn-primary btn-sm form-control"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <input
+                            type="text"
+                            name="admin_name"
+                            value="<?= $Admin['admin_name'] ?>"
+                            class="form-control my-2"
+                          />
+                        </div>
+                        <div class="col-md-12">
+                          <input
+                            type="email"
+                            name="admin_email"
+                            value="<?= $Admin['admin_email'] ?>"
+                            class="form-control my-2"
+                          />
+                        </div>
+
+                        <div class="col-md-6">
+                          <select
+                            name="rule_id"
+                            id=""
+                            class="form-control my-2"
+                          >
+                            <?php foreach ($Rules as $Rule): ?>
+                            <?php if ($Rule['$rule_id'] == $Admin['rule_id']): ?>
+                            <option selected disabled hidden>
+                              <?= $Rule['rule_title'] ?>
+                            </option>
+                            <?php endif; ?>
+                            <option value="<?= $Rule['rule_id'] ?>">
+                              <?= $Rule['rule_title'] ?>
+                            </option>
+                            <?php endforeach; ?>
+                          </select>
+                        </div>
+
+                        <div class="col-md-6">
+                          <select
+                            name="position_id"
+                            id=""
+                            class="form-control my-2"
+                          >
+                            <?php foreach ($Positions as $Position): ?>
+                            <?php if ($Position['position_id'] == $Admin['position_id']): ?>
+                            <option selected disabled hidden>
+                              <?= $Position['position_name'] ?>
+                            </option>
+                            <?php endif; ?>
+                            <option value="<?= $Position['position_id'] ?>">
+                              <?= $Position['position_name'] ?>
+                            </option>
+                            <?php endforeach; ?>
+                          </select>
+                        </div>
+                        <div class="d-grid">
+                          <button
+                            class="btn btn-outline-dark rounded-pill my-2 fs-5 fw-bold"
+                            name="update"
+                          >
+                            Update Admin
+                            <?= $Admin['admin_name'] ?>
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- <app-footer></app-footer> -->

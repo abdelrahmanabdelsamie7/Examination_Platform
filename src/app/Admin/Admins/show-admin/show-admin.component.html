@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<app-aside></app-aside>
+
+<main id="main" class="main">
+  <div class="container col-md-12 col-lg-10">
+    <h3 class="fs-3 fw-bold text-center text-white-50 my-3">
+      Admin
+      {{ Admin.username }}
+    </h3>
+    <div class="card bg-dark text-light">
+      <div
+        class="card-img d-block mx-auto my-3"
+        style="width: 170px; height: 170px"
+      >
+        <img
+          src="../../../../assets/Images/pngwing.com.png"
+          style="width: 100%; height: 100%"
+          class="img-fluid rounded-circle"
+        />
+      </div>
+      <div class="card-body text-center">
+        <h4 class="fs-6 text-white-50">
+          First Name :
+          {{ Admin.first_name }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Second Name :
+          {{ Admin.second_name }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Third Name :
+          {{ Admin.third_name }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Email:
+          {{ Admin.email }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          City:
+          {{ Admin.city }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Address:
+          {{ Admin.address }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Phone:
+          {{ Admin.phone }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Birth Date:
+          {{ Admin.birth_date }}
+        </h4>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- End #main -->
