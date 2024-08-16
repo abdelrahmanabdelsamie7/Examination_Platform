@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-all',
@@ -11,7 +11,8 @@ export class ListAllComponent {
   id!: any;
   AllAdmins!: any[];
   count!: any;
-  constructor(private __HttpClient: HttpClient) {
+  constructor(private __HttpClient: HttpClient, private __Router: Router) {
+  
     this.__HttpClient
       .get('http://localhost:80/api/accounts/admins/', {
         headers: { Authorization: 'Bearer ' + localStorage.getItem('token') },

@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-instructor',
   templateUrl: './add-instructor.component.html',
-  styleUrls: ['./add-instructor.component.css']
+  styleUrls: ['./add-instructor.component.css'],
 })
 export class AddInstructorComponent {
   username!: string;
@@ -21,8 +21,10 @@ export class AddInstructorComponent {
   city!: string;
   address!: string;
   phone!: string;
+  specialized_in!: any;
   constructor(private __HttpClient: HttpClient, private __Router: Router) {}
   addInstructor() {
+    
     this.__HttpClient
       .post(
         'http://localhost:80/api/accounts/instructors/',
@@ -41,6 +43,7 @@ export class AddInstructorComponent {
           address: this.address,
           phone: this.phone,
           user_type: 2,
+          specialized_in: this.specialized_in,
         },
         {
           headers: { Authorization: 'Bearer ' + localStorage.getItem('token') },

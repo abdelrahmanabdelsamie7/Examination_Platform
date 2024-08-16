@@ -20,6 +20,27 @@ import { UpdateAdminComponent } from './Admin/Admins/update-admin/update-admin.c
 import { ListAllInstructorsComponent } from './Admin/Instructors/list-all-instructors/list-all-instructors.component';
 import { ShowInstructorComponent } from './Admin/Instructors/show-instructor/show-instructor.component';
 import { AddInstructorComponent } from './Admin/Instructors/add-instructor/add-instructor.component';
+import { ListAllDepartmentsComponent } from './Admin/Departments/list-all-departments/list-all-departments.component';
+import { ShowDepartmentComponent } from './Admin/Departments/show-department/show-department.component';
+import { UpdateDepartmentComponent } from './Admin/Departments/update-department/update-department.component';
+import { AddDepartmentComponent } from './Admin/Departments/add-department/add-department.component';
+import { ListAllCoursesComponent } from './Admin/Courses/list-all-courses/list-all-courses.component';
+import { AddCourseComponent } from './Admin/Courses/add-course/add-course.component';
+import { ShowCourseComponent } from './Admin/Courses/show-course/show-course.component';
+import { UpdateCourseComponent } from './Admin/Courses/update-course/update-course.component';
+import { ListAllLevelsComponent } from './Admin/Levels/list-all-levels/list-all-levels.component';
+import { ShowLevelComponent } from './Admin/Levels/show-level/show-level.component';
+import { AddLevelComponent } from './Admin/Levels/add-level/add-level.component';
+import { UpdateLevelComponent } from './Admin/Levels/update-level/update-level.component';
+import { ListAllStudentsComponent } from './Admin/Students/list-all-students/list-all-students.component';
+import { AddStudentComponent } from './Admin/Students/add-student/add-student.component';
+import { ShowStudentComponent } from './Admin/Students/show-student/show-student.component';
+import { UpdateStudentComponent } from './Admin/Students/update-student/update-student.component';
+import { NavbarStudentComponent } from './Student/Shared/navbar-student/navbar-student.component';
+import { AsideStudentComponent } from './Student/Shared/aside-student/aside-student.component';
+import { StudentPageComponent } from './Student/Shared/student-page/student-page.component';
+import { StudentProfileComponent } from './Student/Shared/student-profile/student-profile.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +58,26 @@ import { AddInstructorComponent } from './Admin/Instructors/add-instructor/add-i
     ListAllInstructorsComponent,
     ShowInstructorComponent,
     AddInstructorComponent,
-
+    ListAllDepartmentsComponent,
+    ShowDepartmentComponent,
+    UpdateDepartmentComponent,
+    AddDepartmentComponent,
+    ListAllCoursesComponent,
+    AddCourseComponent,
+    ShowCourseComponent,
+    UpdateCourseComponent,
+    ListAllLevelsComponent,
+    ShowLevelComponent,
+    AddLevelComponent,
+    UpdateLevelComponent,
+    ListAllStudentsComponent,
+    AddStudentComponent,
+    ShowStudentComponent,
+    UpdateStudentComponent,
+    NavbarStudentComponent,
+    AsideStudentComponent,
+    StudentPageComponent,
+    StudentProfileComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,7 @@ export class ShowAdminComponent {
     private __HttpClient: HttpClient,
     private __ActivatedRoute: ActivatedRoute
   ) {
+    
     this.id = this.__ActivatedRoute.snapshot.params?.['id'];
     this.__HttpClient
       .get(`http://localhost:80/api/accounts/admins/${this.id}`, {

@@ -1,0 +1,33 @@
+:root {
+  scroll-behavior: smooth;
+  --color-white: #c3c5ca;
+  --color-bg: #1c1e22 !important ;
+  --color-card: #4b536b !important ;
+  --color-hover: #4b536b !important ;
+  --color-bg-hover: #c3c5ca !important ;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #1c1e22;
+  color: #444444;
+}
+
+a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+}

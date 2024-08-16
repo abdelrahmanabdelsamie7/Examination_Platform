@@ -1,0 +1,102 @@
+<app-navbar></app-navbar>
+<app-aside></app-aside>
+<main id="main" class="main">
+  <h3 class="text-center text-white-50 fw-bold my-5">Update Course</h3>
+  <div class="container col-md-12 col-lg-10 mt-5">
+    <!-- <div class="alert alert-success text-center fw-bold alert-dismissible fade show" role="alert">
+
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div> -->
+
+    <div class="card bg-dark">
+      <div class="row">
+        <div class="col-md-4">
+          <input
+            value="{{ CourseDataTitle }}"
+            [(ngModel)]="title"
+            type="text"
+            name="title"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-4">
+          <input
+            value="{{ CourseDataDescription }}"
+            [(ngModel)]="description"
+            type="text"
+            name="description"
+            placeholder="Description Of Course"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-4">
+          <input
+            value="{{ CourseDataDuration }}"
+            [(ngModel)]="duration"
+            type="number"
+            name="duration"
+            placeholder="Duration Of Course"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-4">
+          <label class="text-white-50" for="course_code">Department : </label>
+          <select
+            [(ngModel)]="course_code"
+            type="text"
+            name="course_code"
+            id="course_code"
+            class="form-control my-2"
+          >
+            <option selected disabled>
+              Update The Course Code From Department <span class="text-danger">{{ CourseDataCourse_code }}</span>
+            </option>
+            <option *ngFor="let item of Departments" value="{{ item.title }}">
+              {{ item.title }}
+            </option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="text-white-50" for="Level">Level : </label>
+          <select
+            id="Level"
+            [(ngModel)]="level"
+            type="number"
+            name="level"
+            class="form-control my-2"
+          >
+            <option selected disabled>Upadate The Level Number {{ CourseDataLevel }}</option>
+            <option  *ngFor="let item of Levels" value="{{ item.level_number }}">
+              {{ item.level_number }}
+            </option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="text-white-50" for="Instructor">Instructor : </label>
+          <select
+            id="Instructor"
+            [(ngModel)]="instructor"
+            type="number"
+            name="instructor"
+            class="form-control my-2"
+          >
+            <option selected disabled>Update  The Instructor Of Course {{ CourseDataInstructor }}</option>
+            <option *ngFor="let item of Instructors" value="{{ item.id }}">
+              {{ item.username }}
+            </option>
+          </select>
+        </div>
+        <div class="d-grid">
+          <button
+            (click)="updateCourse()"
+            class="btn btn-outline-warning rounded-pill my-2 fs-5 fw-bold"
+            name="send"
+          >
+            Update Course
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- End #main -->

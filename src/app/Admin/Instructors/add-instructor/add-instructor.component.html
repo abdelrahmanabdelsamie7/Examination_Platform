@@ -4,7 +4,7 @@
   <h3 class="text-center text-white-50 fw-bold my-5">Add New Instructor</h3>
   <div class="container col-md-12 col-lg-10 mt-5">
     <!-- <div class="alert alert-success text-center fw-bold alert-dismissible fade show" role="alert">
-        
+
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div> -->
 
@@ -127,6 +127,16 @@
             <option value="m">Male</option>
             <option value="f">Female</option>
           </select>
+        </div>
+        <div class="col-md-12">
+          <input
+          class="text-center fs-6"
+            [(ngModel)]="specialized_in"
+            type="text"
+            name="specialized_in"
+            placeholder="Instructor Specialized In"
+            class="form-control my-2"
+          />
         </div>
         <div class="d-grid">
           <button

@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<app-aside></app-aside>
+<main id="main" class="main">
+  <h3 class="text-center text-white-50 fw-bold my-5">
+    Update Department {{ DepartmentTitle }}
+  </h3>
+  <div class="container col-md-12 col-lg-10 mt-5">
+    <!-- <div class="alert alert-success text-center fw-bold alert-dismissible fade show" role="alert">
+
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div> -->
+
+    <div class="card bg-dark">
+      <div class="row">
+        <div class="col-md-12">
+          <input
+            value="{{ DepartmentTitle }}"
+            type="text"
+            [(ngModel)]="title"
+            name="title"
+            placeholder="Title Of Department"
+            class="form-control my-2"
+          />
+        </div>
+
+        <div class="d-grid">
+          <button
+            (click)="updateDepartment()"
+            class="btn btn-outline-warning rounded-pill my-2 fs-5 fw-bold"
+            name="send"
+          >
+            Update Department
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- End #main -->

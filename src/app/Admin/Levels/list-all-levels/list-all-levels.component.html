@@ -1,0 +1,40 @@
+<app-navbar></app-navbar>
+<app-aside></app-aside>
+<!-- Start List Levels -->
+<main id="main" class="main">
+  <div class="container col-md-12 col-lg-10 mt-5">
+    <h3 class="fs-1 fw-bold text-center text-white-50 my-5">
+      List Of Levels
+    </h3>
+    <div class="card bg-dark text-light">
+      <table class="table datatable table-dark table-hover table-striped">
+        <thead>
+          <tr>
+            <th>Level Number :</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of AllLevels; index as i">
+            <td class="ps-4">{{ item.level_number }}</td>
+            <td>
+              <a (click)="deleteLevel(item.level_number)"
+                ><i class="fs-5 text-danger fa-solid fa-trash-can"></i
+              ></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="button text-center">
+    <a
+      class="btn btn-outline-secondary rounded-pill my-5 px-5 fs-5 fw-bold"
+      routerLink="/Add_Level"
+    >
+      <i class="fa-solid fa-user-plus px-1"></i> Add New Level
+    </a>
+  </div>
+</main>
+
+<!-- End List Levels -->

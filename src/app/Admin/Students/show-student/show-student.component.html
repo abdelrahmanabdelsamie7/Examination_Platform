@@ -1,0 +1,90 @@
+<app-navbar></app-navbar>
+<app-aside></app-aside>
+
+<main id="main" class="main">
+  <div class="container col-md-12 col-lg-10 my-5">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div
+            class="card-img d-block mx-auto my-3"
+            style="width: 170px; height: 170px"
+          >
+            <img
+              src="../../../../assets/Images/pngwing.com.png"
+              style="width: 100%; height: 100%"
+              class="img-fluid rounded-circle"
+            />
+          </div>
+          <div class="card-body text-center">
+            <h4 class="fs-6 text-white-50">
+              User Name:
+              {{ Student.username }}
+            </h4>
+            <hr />
+            <h4 class="fs-6 text-white-50">
+              Email:
+              {{ Student.email }}
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card pt-4">
+          <div class="card-body text-center">
+            <h4 class="fs-6 text-white-50">
+              First Name :
+              {{ Student.first_name }}
+            </h4>
+            <hr />
+            <h4 class="fs-6 text-white-50">
+              Second Name :
+              {{ Student.second_name }}
+            </h4>
+            <hr />
+            <h4 class="fs-6 text-white-50">
+              Third Name :
+              {{ Student.third_name }}
+            </h4>
+            <hr />
+            <h4 class="fs-6 text-white-50">
+              Department:
+              {{ Student.department.title }}
+            </h4>
+            <hr />
+            <h4 class="fs-6 text-white-50" *ngFor="let item of Student.courses">
+              Course:
+              {{ item.title }}
+            </h4>
+            <hr />
+            <h4 class="fs-6 text-white-50">
+              City:
+              {{ Student.city }}
+            </h4>
+            <hr />
+            <h4 class="fs-6 text-white-50">
+              Address:
+              {{ Student.address }}
+            </h4>
+            <hr />
+            <h4 class="fs-6 text-white-50">
+              Phone:
+              {{ Student.phone }}
+            </h4>
+            <hr />
+            <h4 class="fs-6 text-white-50">
+              Birth Date:
+              {{ Student.birth_date }}
+            </h4>
+            <hr />
+            <h6 class="fs-6 text-white-50">
+              Date Joined :
+              {{ Student.date_joined }}
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- End #main -->

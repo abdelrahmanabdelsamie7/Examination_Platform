@@ -20,7 +20,6 @@ export class LoginComponent {
         password: this.password,
       })
       .subscribe((data: any) => {
-      
         this.token = data.access;
         this.hangleToken(this.token);
       });
@@ -44,6 +43,8 @@ export class LoginComponent {
     localStorage.setItem('token', token);
     if (userRole == 'admin') {
       this.__Router.navigateByUrl('/Admin_Page');
+    } else if (userRole == 'student') {
+      this.__Router.navigateByUrl('/Student_Page');
     }
   }
 }

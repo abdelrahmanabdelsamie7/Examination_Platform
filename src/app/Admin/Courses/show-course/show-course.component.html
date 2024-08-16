@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<app-aside></app-aside>
+
+<main id="main" class="main">
+  <div class="container col-md-12 col-lg-10">
+    <h3 class="fs-3 fw-bold text-center text-white-50 my-3">
+      Course {{ CourseData.title }}
+    </h3>
+    <div class="card bg-dark text-light">
+      <div class="card-body text-center">
+        <h4 class="fs-6 pt-2 text-white-50">
+          ID :
+          {{ id }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Department Of Course : {{ CourseData.course_code }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Title Of Course : {{ CourseData.title }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Description Of Course : {{ CourseData.description }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Duration Of Course : {{ CourseData.duration }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Level Of Course : {{ CourseData.level }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Instructor Of Course : {{ CourseData.instructor.first_name }}
+          {{ CourseData.instructor.second_name }}
+        </h4>
+        <hr />
+      </div>
+    </div>
+  </div>
+</main>
+<!-- End #main -->
