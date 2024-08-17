@@ -40,6 +40,11 @@ import { NavbarStudentComponent } from './Student/Shared/navbar-student/navbar-s
 import { AsideStudentComponent } from './Student/Shared/aside-student/aside-student.component';
 import { StudentPageComponent } from './Student/Shared/student-page/student-page.component';
 import { StudentProfileComponent } from './Student/Shared/student-profile/student-profile.component';
+import { ListAllStudentCoursesEnrollmentComponent } from './Admin/StudentCoursesEnrollment/list-all-student-courses-enrollment/list-all-student-courses-enrollment.component';
+import { AddCoursesToStudentComponent } from './Admin/StudentCoursesEnrollment/add-courses-to-student/add-courses-to-student.component';
+import { ShowCoursesOfStudentComponent } from './Admin/StudentCoursesEnrollment/show-courses-of-student/show-courses-of-student.component';
+import { SComponent } from './Admin/s/s.component';
+import { UpdateCoursesOfStudentComponent } from './Admin/StudentCoursesEnrollment/update-courses-of-student/update-courses-of-student.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +83,11 @@ import { StudentProfileComponent } from './Student/Shared/student-profile/studen
     AsideStudentComponent,
     StudentPageComponent,
     StudentProfileComponent,
+    ListAllStudentCoursesEnrollmentComponent,
+    AddCoursesToStudentComponent,
+    ShowCoursesOfStudentComponent,
+    SComponent,
+    UpdateCoursesOfStudentComponent,
   ],
   imports: [
     BrowserModule,

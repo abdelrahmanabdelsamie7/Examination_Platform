@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+<app-aside></app-aside>
+<main id="main" class="main">
+  <h3 class="text-center text-white-50 fw-bold my-5">
+    Update Course Of Student
+  </h3>
+  <div class="container col-md-12 col-lg-10 mt-5">
+    <!-- <div class="alert alert-success text-center fw-bold alert-dismissible fade show" role="alert">
+
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div> -->
+
+    <div class="card bg-dark p-3">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="text-white-50 py-2 fw-bold" for="student"
+            >Update Student
+            <span class="text-warning fw-bold"
+              >{{ CourseOfStudentData.student.username }}:</span
+            >
+          </label>
+          <select
+            [(ngModel)]="student"
+            name="student"
+            id="student"
+            class="form-control my-2"
+          >
+            <option selected disabled>Select Student ..</option>
+            <option *ngFor="let item of AllStudents" value="{{ item.id }}">
+              {{ item.username }}
+            </option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="text-white-50 py-2 fw-bold" for="course"
+            >Update Course
+            <span class="text-warning fw-bold"
+              >{{ CourseOfStudentData.course.title }}:</span
+            >
+          </label>
+          <select
+            [(ngModel)]="course"
+            name="course"
+            id="course"
+            class="form-control my-2"
+          >
+            <option selected disabled>Select Course ..</option>
+
+            <option *ngFor="let item of AllCourses" value="{{ item.id }}">
+              {{ item.title }}
+            </option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="text-white-50 py-2 fw-bold" for="status"
+            >Update Status
+            <span class="text-warning fw-bold"
+              >{{ CourseOfStudentData.pass_status }} :</span
+            ></label
+          >
+          <select
+            [(ngModel)]="status"
+            name="status"
+            id="status"
+            class="form-control my-2"
+          >
+            <option selected disabled>Select Status ..</option>
+            <option value="true">true</option>
+            <option value="false">false</option>
+          </select>
+        </div>
+
+        <div class="d-grid">
+          <button
+          (click)="updateCourseOfStudent()"
+            class="btn btn-outline-warning rounded-pill my-2 fs-5 fw-bold"
+            name="send"
+          >
+            Update Course Of Student
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- End #main -->

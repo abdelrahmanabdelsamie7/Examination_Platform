@@ -29,6 +29,10 @@ import { AddStudentComponent } from './Admin/Students/add-student/add-student.co
 import { Error404Component } from './Admin/Shared/error404/error404.component';
 import { StudentPageComponent } from './Student/Shared/student-page/student-page.component';
 import { StudentProfileComponent } from './Student/Shared/student-profile/student-profile.component';
+import { ListAllStudentCoursesEnrollmentComponent } from './Admin/StudentCoursesEnrollment/list-all-student-courses-enrollment/list-all-student-courses-enrollment.component';
+import { AddCoursesToStudentComponent } from './Admin/StudentCoursesEnrollment/add-courses-to-student/add-courses-to-student.component';
+import { ShowCoursesOfStudentComponent } from './Admin/StudentCoursesEnrollment/show-courses-of-student/show-courses-of-student.component';
+import { UpdateCoursesOfStudentComponent } from './Admin/StudentCoursesEnrollment/update-courses-of-student/update-courses-of-student.component';
 
 const routes: Routes = [
   { path: 'Login', component: LoginComponent },
@@ -76,6 +80,21 @@ const routes: Routes = [
   { path: 'edit_Level/:id', component: UpdateLevelComponent },
   // Add New Level By ID
   { path: 'Add_Level', component: AddLevelComponent },
+
+  // List All StudentCoursesEnrollment
+  {
+    path: 'Student_Courses_Enrollment',
+    component: ListAllStudentCoursesEnrollmentComponent,
+  },
+  // Add Course To Student
+  { path: 'Add_New_Course', component: AddCoursesToStudentComponent },
+  //Show Courses Of Student
+  { path: 'Courses_Of_Student/:id', component: ShowCoursesOfStudentComponent },
+  // Update Course Of Student
+  {
+    path: 'Update_Course_Of_Student/:id',
+    component: UpdateCoursesOfStudentComponent,
+  },
 
   // List All Students
   { path: 'Students', component: ListAllStudentsComponent },

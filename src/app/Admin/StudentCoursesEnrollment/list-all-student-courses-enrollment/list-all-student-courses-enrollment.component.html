@@ -1,0 +1,61 @@
+<app-navbar></app-navbar> <app-aside></app-aside>
+
+<app-navbar></app-navbar>
+<app-aside></app-aside>
+<!-- Start List Cousrses -->
+<main id="main" class="main">
+  <div class="container col-md-12 col-lg-10 mt-5">
+    <h3 class="fs-1 fw-bold text-center text-white-50 my-5">
+      List Of Students Cousrses Enrollment
+    </h3>
+    <div class="card bg-dark text-light">
+      <table class="table datatable table-dark table-hover table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Student:</th>
+            <th>Course :</th>
+            <th>Status:</th>
+            <th colspan="3" class="text-center">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of AllStudentCoursesEnrollment; index as i">
+            <td>{{ i + 1 }}</td>
+            <td>
+              {{ item.student.first_name }} {{ item.student.second_name }}
+            </td>
+            <td>{{ item.course.title }}</td>
+            <td>{{ item.pass_status }}</td>
+            <td>
+              <a routerLink="/Courses_Of_Student/{{ item.id }}"
+                ><i class="text-info fs-5 fa-solid fa-eye"></i
+              ></a>
+            </td>
+            <td>
+              <a routerLink="/Update_Course_Of_Student/{{ item.id }}"
+                ><i class="fs-5 text-warning fa-regular fa-pen-to-square"></i
+              ></a>
+            </td>
+            <td>
+              <a (click)="deleteCourseFromStudent(item.id)"
+                ><i class="fs-5 text-danger fa-solid fa-trash-can"></i
+              ></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="button text-center">
+    <a
+      class="btn btn-outline-secondary rounded-pill my-5 px-5 fs-5 fw-bold"
+      routerLink="/Add_New_Course"
+    >
+      <i class="fa-solid fa-user-plus px-1"></i> Add New Course To Specific
+      Student
+    </a>
+  </div>
+</main>
+
+<!-- End List Cousrses -->
