@@ -1,0 +1,41 @@
+<app-navbar-instructor></app-navbar-instructor>
+<app-aside-instructor></app-aside-instructor>
+
+<main id="main" class="main">
+  <div class="container col-md-12 col-lg-10">
+    <h3 class="fs-3 fw-bold text-center text-white-50 my-3">
+      Exam {{ ExamData.title }}
+    </h3>
+    <div class="card bg-dark text-light">
+      <div class="card-body text-center">
+        <h4 class="fs-6 pt-2 text-white-50">
+          ID :
+          {{ id }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Instructor Of Exam : {{ ExamData.instructor.username }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Course Of Exam : {{ ExamData.course.title }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Exam Score : {{ ExamData.exam_score }}
+        </h4>
+        <hr />
+
+        <h4 class="fs-6 text-white-50">
+          Start Date Of Exam : {{ ExamData.start_date | date }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          End Date Of Exam : {{ ExamData.end_date | date }}
+        </h4>
+        <hr />
+      </div>
+    </div>
+  </div>
+</main>
+<!-- End #main -->

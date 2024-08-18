@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServiceAuthService } from 'src/app/service-auth.service';
 
 @Component({
   selector: 'app-add-student',
@@ -28,7 +29,12 @@ export class AddStudentComponent {
   Levels!: any;
   Departments!: any;
   Courses!: any;
-  constructor(private __HttpClient: HttpClient, private __Router: Router) {
+  constructor(
+    private __HttpClient: HttpClient,
+    private __Router: Router,
+    private __ServiceAuthService: ServiceAuthService
+  ) {
+    this.__ServiceAuthService.authAdmin();
     // Get Levels
     this.__HttpClient
       .get('http://localhost:80/api/levels', {
@@ -82,7 +88,7 @@ export class AddStudentComponent {
         }
       )
       .subscribe((data: any) => {
-        console.log(data);
+        // console.log(data);
         this.__Router.navigateByUrl('/Students');
       });
   }

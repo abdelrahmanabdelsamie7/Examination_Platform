@@ -90,3 +90,6 @@
 .profile .profile-edit img {
   max-width: 120px;
 }
+ul {
+  list-style: none ;
+}

@@ -1,0 +1,90 @@
+<app-navbar-instructor></app-navbar-instructor>
+<app-aside-instructor></app-aside-instructor>
+<main id="main" class="main">
+  <h3 class="text-center text-white-50 fw-bold my-5">Add New Exam</h3>
+  <div class="container col-md-12 col-lg-10 mt-5">
+    <!-- <div class="alert alert-success text-center fw-bold alert-dismissible fade show" role="alert">
+
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div> -->
+
+    <div class="card bg-dark p-3">
+      <div class="row">
+        <div class="col-md-4">
+          <label class="text-white-50" for="title">Title Of Exam : </label>
+          <input
+            id="title"
+            type="text"
+            name="title"
+            placeholder="Title Of Exam"
+            [(ngModel)]="title"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-4">
+          <label class="text-white-50" for="start_date"
+            >Start Date Of Exam :
+          </label>
+          <input
+            id="start_date"
+            type="datetime-local"
+            name="start_date"
+            placeholder="Start Date Of Exam "
+            [(ngModel)]="start_date"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="col-md-4">
+          <label class="text-white-50" for="end_date"
+            >End Date Of Exam :
+          </label>
+          <input
+            id="end_date"
+            type="datetime-local"
+            name="end_date"
+            placeholder="End Date Of Exam"
+            [(ngModel)]="end_date"
+            class="form-control my-2"
+          />
+        </div>
+
+        <div class="col-md-8">
+          <label class="text-white-50" for="coures">coures : </label>
+          <select
+            id="coures"
+            type="number"
+            name="coures"
+            [(ngModel)]="course"
+            class="form-control my-2"
+          >
+            <option selected disabled>Choice The Course</option>
+            <option *ngFor="let item of AllCourses" value="{{ item.id }}">
+              {{ item.title }}
+            </option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="text-white-50" for="exam_score">Exam Score : </label>
+          <input
+            id="exam_score"
+            type="number"
+            name="exam_score"
+            placeholder="Exam Score "
+            [(ngModel)]="exam_score"
+            class="form-control my-2"
+          />
+        </div>
+        <div class="d-grid">
+          <button
+            (click)="addExam()"
+            class="btn btn-outline-secondary rounded-pill my-2 fs-5 fw-bold"
+            name="send"
+          >
+            Add Exam
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- End #main -->

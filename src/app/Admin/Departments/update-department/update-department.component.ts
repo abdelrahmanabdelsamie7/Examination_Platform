@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ServiceAuthService } from 'src/app/service-auth.service';
 
 @Component({
   selector: 'app-update-department',
@@ -14,8 +15,10 @@ export class UpdateDepartmentComponent {
   constructor(
     private __HttpClient: HttpClient,
     private __ActivatedRoute: ActivatedRoute,
-    private __Router: Router
+    private __Router: Router,
+    private __ServiceAuthService: ServiceAuthService
   ) {
+    this.__ServiceAuthService.authAdmin();
     this.id = this.__ActivatedRoute.snapshot.params?.['id'];
     this.__HttpClient
       .get(`http://localhost:80/api/levels/departments/${this.id}`, {
@@ -37,7 +40,7 @@ export class UpdateDepartmentComponent {
         }
       )
       .subscribe((data: any) => {
-        console.log(data);
+        // console.log(data);
         this.__Router.navigateByUrl('/Departments');
       });
   }

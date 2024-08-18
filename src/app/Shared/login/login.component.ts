@@ -42,9 +42,11 @@ export class LoginComponent {
     localStorage.setItem('userId', userId);
     localStorage.setItem('token', token);
     if (userRole == 'admin') {
-      this.__Router.navigateByUrl('/Admin_Page');
+      this.__Router.navigateByUrl('/Admin_Profile');
     } else if (userRole == 'student') {
-      this.__Router.navigateByUrl('/Student_Page');
+      this.__Router.navigateByUrl('/Student_Profile');
+    } else if (userRole == 'instructor') {
+      this.__Router.navigateByUrl('/Instructor_Profile');
     }
   }
 }

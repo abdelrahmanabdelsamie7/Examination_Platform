@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { ServiceAuthService } from 'src/app/service-auth.service';
 
 @Component({
   selector: 'app-list-all-instructors',
@@ -9,13 +10,17 @@ import { Component } from '@angular/core';
 export class ListAllInstructorsComponent {
   count!: any;
   AllInstructors!: any[];
-  constructor(private __HttpClient: HttpClient) {
+  constructor(
+    private __HttpClient: HttpClient,
+    private __ServiceAuthService: ServiceAuthService
+  ) {
+    this.__ServiceAuthService.authAdmin();
     this.__HttpClient
       .get('http://localhost:80/api/accounts/instructors/', {
         headers: { Authorization: 'Bearer ' + localStorage.getItem('token') },
       })
       .subscribe((data: any) => {
-        console.log(data);
+        // console.log(data);
         this.count = data.count;
         this.AllInstructors = data.results;
       });

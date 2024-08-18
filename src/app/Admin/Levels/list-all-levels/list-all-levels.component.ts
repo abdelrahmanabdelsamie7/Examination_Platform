@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServiceAuthService } from 'src/app/service-auth.service';
 
 @Component({
   selector: 'app-list-all-levels',
@@ -9,13 +10,18 @@ import { Router } from '@angular/router';
 })
 export class ListAllLevelsComponent {
   AllLevels!: any;
-  constructor(private __HttpClient: HttpClient, private __Router: Router) {
+  constructor(
+    private __HttpClient: HttpClient,
+    private __Router: Router,
+    private __ServiceAuthService: ServiceAuthService
+  ) {
+    this.__ServiceAuthService.authAdmin();
     this.__HttpClient
       .get('http://localhost:80/api/levels/', {
         headers: { Authorization: 'Bearer ' + localStorage.getItem('token') },
       })
       .subscribe((data: any) => {
-        console.log(data);
+        // console.log(data);
         this.AllLevels = data.results;
       });
   }
@@ -26,9 +32,9 @@ export class ListAllLevelsComponent {
       })
       .subscribe((data: any) => {
         // console.log(data);
-       setTimeout(()=>{
-        window.location.reload() ;
-       },250)
+        setTimeout(() => {
+          window.location.reload();
+        }, 250);
       });
   }
 }

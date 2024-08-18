@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServiceAuthService } from 'src/app/service-auth.service';
 
 @Component({
   selector: 'app-add-admin',
@@ -21,7 +22,13 @@ export class AddAdminComponent {
   city!: string;
   address!: string;
   phone!: string;
-  constructor(private __HttpClient: HttpClient, private __Router: Router) {}
+  constructor(
+    private __HttpClient: HttpClient,
+    private __Router: Router,
+    private __ServiceAuthService: ServiceAuthService
+  ) {
+    this.__ServiceAuthService.authAdmin();
+  }
   addAdmin() {
     this.__HttpClient
       .post(
@@ -47,7 +54,7 @@ export class AddAdminComponent {
         }
       )
       .subscribe((data: any) => {
-        console.log(data);
+        // console.log(data);
         this.__Router.navigateByUrl('/Admins');
       });
   }

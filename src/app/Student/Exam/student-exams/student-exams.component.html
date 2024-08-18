@@ -1,0 +1,42 @@
+<app-navbar-student></app-navbar-student>
+<app-aside-student></app-aside-student>
+<main id="main" class="main">
+  <div class="container col-md-12 col-lg-10 mt-5">
+    <h3 class="fs-1 fw-bold text-center text-white-50 my-5">List Of Exams</h3>
+    <div class="card bg-dark text-light">
+      <table class="table datatable table-dark table-hover table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Instructor :</th>
+            <th>Course :</th>
+            <th>Exam:</th>
+            <th>Exam Score :</th>
+            <th>Start Date :</th>
+            <th>End Date :</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of AllExams; index as i">
+            <td>{{ i + 1 }}</td>
+            <td>{{ item.instructor.username }}</td>
+            <td>{{ item.course.title }}</td>
+            <td>{{ item.title }}</td>
+            <td>{{ item.exam_score }}</td>
+            <td>{{ item.start_date | date : "MMM dd, yyyy 'at' hh:mm a" }}</td>
+            <td>{{ item.end_date | date : "MMM dd, yyyy 'at' hh:mm a" }}</td>
+            <td>
+              <a
+                class="btn btn-outline-secondary"
+                routerLink="/Exam_Page/{{ item.id }}"
+              >
+                Start Exam
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>

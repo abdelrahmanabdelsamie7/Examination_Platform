@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ServiceAuthService } from 'src/app/service-auth.service';
 
 @Component({
   selector: 'app-update-courses-of-student',
@@ -19,8 +20,10 @@ export class UpdateCoursesOfStudentComponent {
   constructor(
     private __HttpClient: HttpClient,
     private __Router: Router,
-    private __ActivatedRoute: ActivatedRoute
+    private __ActivatedRoute: ActivatedRoute,
+    private __ServiceAuthService: ServiceAuthService
   ) {
+    this.__ServiceAuthService.authAdmin();
     // Get Student To Get Id
     this.__HttpClient
       .get('http://localhost:80/api/accounts/students/', {

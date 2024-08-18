@@ -1,0 +1,23 @@
+<app-navbar-instructor></app-navbar-instructor>
+<app-aside-instructor></app-aside-instructor>
+
+<main id="main" class="main">
+  <div class="container col-md-12 col-lg-10">
+    <h3 class="fs-3 fw-bold text-center text-white-50 my-3">
+      Choice {{ ChoiceData.text }}
+    </h3>
+    <div class="card bg-dark text-light p-4">
+      <div class="card-body text-center">
+        <h4 class="fs-6 text-white-50">
+          Question : {{ ChoiceData.question.text }}
+        </h4>
+        <hr />
+        <h4 class="fs-6 text-white-50">
+          Status Of Choice : {{ ChoiceData.is_correct }}
+        </h4>
+        <hr />
+      </div>
+    </div>
+  </div>
+</main>
+<!-- End #main -->

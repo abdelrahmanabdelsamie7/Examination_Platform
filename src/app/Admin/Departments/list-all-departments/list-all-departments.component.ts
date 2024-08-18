@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServiceAuthService } from 'src/app/service-auth.service';
 
 @Component({
   selector: 'app-list-all-departments',
@@ -9,8 +10,12 @@ import { Router } from '@angular/router';
 })
 export class ListAllDepartmentsComponent {
   AllDepartments!: any;
-  constructor(private __HttpClient: HttpClient, private __Router: Router) {
-
+  constructor(
+    private __HttpClient: HttpClient,
+    private __Router: Router,
+    private __ServiceAuthService: ServiceAuthService
+  ) {
+    this.__ServiceAuthService.authAdmin();
     this.__HttpClient
       .get('http://localhost:80/api/levels/departments/', {
         headers: { Authorization: 'Bearer ' + localStorage.getItem('token') },

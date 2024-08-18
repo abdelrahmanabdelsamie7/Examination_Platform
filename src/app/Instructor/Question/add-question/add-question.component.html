@@ -1,0 +1,50 @@
+<app-navbar-instructor></app-navbar-instructor>
+<app-aside-instructor></app-aside-instructor>
+<main id="main" class="main">
+  <h3 class="text-center text-white-50 fw-bold my-5">Add Question To Exam</h3>
+  <div class="container col-md-12 col-lg-10 mt-5">
+    <!-- <div class="alert alert-success text-center fw-bold alert-dismissible fade show" role="alert">
+
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div> -->
+
+    <div class="card bg-dark p-3">
+      <div class="row">
+        <div class="col-md-6">
+          <label class="text-white-50" for="exam">Choice The Exam : </label>
+          <select
+            id="exam"
+            name="exam"
+            [(ngModel)]="exam"
+            class="form-control my-2"
+          >
+            <option *ngFor="let item of AllExams" value="{{ item.id }}">
+              {{ item.title }}
+            </option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="text-white-50" for="text">Title Of Question : </label>
+          <input
+            id="text"
+            type="text"
+            name="text"
+            [(ngModel)]="text"
+            class="form-control my-2"
+          />
+        </div>
+
+        <div class="d-grid">
+          <button
+            (click)="addQuestion()"
+            class="btn btn-outline-secondary rounded-pill my-2 fs-5 fw-bold"
+            name="send"
+          >
+            Add Question
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<!-- End #main -->

@@ -1,0 +1,62 @@
+<app-navbar-instructor></app-navbar-instructor>
+<app-aside-instructor></app-aside-instructor>
+<!-- Start List Cousrses -->
+<main id="main" class="main">
+  <div class="container col-md-12 col-lg-10 mt-5">
+    <h3 class="fs-1 fw-bold text-center text-white-50 my-5">List Of Exams</h3>
+    <div class="card bg-dark text-light">
+      <table class="table datatable table-dark table-hover table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title :</th>
+            <th colspan="3" class="text-center">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of AllExams; index as i">
+            <td>{{ i + 1 }}</td>
+            <td>{{ item.title }}</td>
+            <td>
+              <a routerLink="/Show_Exam/{{ item.id }}">
+                <i class="text-info fs-5 fa-solid fa-eye"></i
+              ></a>
+            </td>
+            <td>
+              <a routerLink="/Edit_Exam/{{ item.id }}"
+                ><i class="fs-5 text-warning fa-regular fa-pen-to-square"></i
+              ></a>
+            </td>
+            <td>
+              <a (click)="deleteExam(item.id)"
+                ><i class="fs-5 text-danger fa-solid fa-trash-can"></i
+              ></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="button text-center">
+    <a
+      class="btn btn-outline-secondary rounded-pill my-2 mx-2 px-5 fs-6 fw-bold"
+      routerLink="/Add_Exam"
+    >
+      <i class="fa-solid fa-user-plus px-1"></i> Add New Exam
+    </a>
+    <a
+      class="btn btn-outline-secondary rounded-pill my-2 mx-2 px-5 fs-6 fw-bold"
+      routerLink="/Add_Question"
+    >
+      <i class="fa-solid fa-user-plus px-1"></i> Add Question
+    </a>
+    <a
+      class="btn btn-outline-secondary rounded-pill my-2 mx-2 px-5 fs-6 fw-bold"
+      routerLink="/Add_Choice"
+    >
+      <i class="fa-solid fa-user-plus px-1"></i> Add Choices
+    </a>
+  </div>
+</main>
+
+<!-- End List Cousrses -->

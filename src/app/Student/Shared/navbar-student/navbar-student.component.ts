@@ -12,9 +12,7 @@ export class NavbarStudentComponent {
   constructor(private __HttpClient: HttpClient, private __Router: Router) {
     this.__HttpClient
       .get(
-        `http://localhost:80/api/accounts/${localStorage.getItem(
-          'UserType'
-        )}s/${localStorage.getItem('userId')}`,
+        `http://localhost:80/api/accounts/${localStorage.getItem('UserType')}s/${localStorage.getItem('userId')}`,
         {
           headers: { Authorization: 'Bearer ' + localStorage.getItem('token') },
         }

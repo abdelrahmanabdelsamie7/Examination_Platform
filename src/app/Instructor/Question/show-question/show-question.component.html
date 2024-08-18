@@ -1,0 +1,22 @@
+<app-navbar-instructor></app-navbar-instructor>
+<app-aside-instructor></app-aside-instructor>
+
+<main id="main" class="main">
+  <div class="container col-md-12 col-lg-10">
+    <h3 class="fs-3 fw-bold text-center text-white-50 my-3">
+      Qusetion {{ QuestionData.text }}
+    </h3>
+    <div class="card bg-dark text-light p-4">
+      <div class="card-body text-center">
+        <h4 class="fs-6 text-white-50">Exam : {{ QuestionData.exam.title }}</h4>
+        <hr />
+        <h4 class="fs-6 text-white-50 my-2">Choices Of Qusestion :</h4>
+        <ul *ngFor="let item of QuestionData.choices ; index as i">
+          <li class="text-white-50"> {{ i+1 }}-{{ item.text }}</li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+  </div>
+</main>
+<!-- End #main -->
