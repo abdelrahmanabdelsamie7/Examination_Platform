@@ -1,1 +1,69 @@
-<p>exam-page works!</p>
+<div class="container">
+  <nav class="navbar navbar-expand-lg">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <h5 class="p-2 m-2">Exam :{{ ExamInfo.title }}</h5>
+        </li>
+        <li class="nav-item">
+          <h5 class="p-2 m-2">
+            Instructor : {{ ExamInfo.instructor.username }}
+          </h5>
+        </li>
+        <li class="nav-item">
+          <h5 class="p-2 m-2">Course :{{ ExamInfo.course.title }}</h5>
+        </li>
+        <li class="nav-item">
+          <h5 class="p-2 m-2">Exam Score : {{ ExamInfo.exam_score }}</h5>
+        </li>
+        <li class="nav-item">
+          <h5 class="p-2 m-2">{{ date | date : "mediumTime" }}</h5>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<main class="mainSection">
+  <p class="text-center text-white-50">
+    If You Choice Answer You Can't Choice Once Again !
+  </p>
+  <div class="container col-md-6" *ngFor="let item of ExamData; index as x">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">{{ x + 1 }} - Question : {{ item.text }}</h3>
+        <ul *ngFor="let choice of item.choices; index as i">
+          <li>
+            {{ i + 1 }} -
+            <button
+              
+              id="btnAnswer"
+              type="button"
+              (click)="answer(ExamInfo.id, item.id, choice.id)"
+              class="btn px-4"
+              value="{{ choice.text }}"
+            >
+              {{ choice.text }}
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- <div class="container my-5">
+    <div class="row" *ngFor="let item of ExamData">
+      <div class="col-md-4">
+        <div class="card px-5 py-3">
+          <h2 class="fw-bold">Questions :</h2>
+          <p>{{ item.text }}</p>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card p-5">
+          <h2 class="fw-bold">Choices :</h2>
+          <p *ngFor="let choice of item.choices">{{ choice.text }}</p>
+        </div>
+      </div>
+    </div>
+  </div> -->

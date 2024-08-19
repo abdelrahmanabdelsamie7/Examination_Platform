@@ -45,6 +45,7 @@ import { UpdateChoiceComponent } from './Instructor/Choices/update-choice/update
 import { ListStudentCoursesComponent } from './Student/StudentCourses/list-student-courses/list-student-courses.component';
 import { ExamPageComponent } from './Student/Exam/exam-page/exam-page.component';
 import { StudentExamsComponent } from './Student/Exam/student-exams/student-exams.component';
+import { ListResultsOfStudentsComponent } from './Instructor/Results/list-results-of-students/list-results-of-students.component';
 
 const routes: Routes = [
   //  Login Page
@@ -133,15 +134,18 @@ const routes: Routes = [
   { path: 'Add_Choice', component: AddChoiceComponent },
   { path: 'Show_Choice/:id', component: ShowChoiceComponent },
   { path: 'Edit_Choice/:id', component: UpdateChoiceComponent },
-
   // End Choices
+  // Start Results
+  { path: 'Results', component: ListResultsOfStudentsComponent },
+  // End Results
   //  ------------  End Instrucrtor Permissions ------------
 
   // ------------  Start Student Permissions ------------
   //List Courses That Student Enrollment In
   { path: 'Courses_Of_Student', component: ListStudentCoursesComponent },
   { path: 'Exams_Of_Student', component: StudentExamsComponent },
-  { path: 'Exam_Page/:id', component: ExamPageComponent },
+  { path: 'Exam_Page/:id/:exam_title', component: ExamPageComponent },
+
   // ------------  End Student Permissions ------------
 
   // Student Page

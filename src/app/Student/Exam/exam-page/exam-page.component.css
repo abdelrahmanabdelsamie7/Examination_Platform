@@ -1,0 +1,55 @@
+:root {
+  scroll-behavior: smooth;
+  --color-white: #c3c5ca;
+  --color-bg: #1c1e22 !important ;
+  --color-card: #4b536b !important ;
+  --color-hover: #4b536b !important ;
+  --color-bg-hover: #c3c5ca !important ;
+}
+* {
+  list-style: none !important;
+}
+.navbar {
+  background-color: #1c1e22;
+  color: var(--color-white);
+}
+.card {
+  background-color: #1c1e22;
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 0 30px rgba(208, 213, 223, 0.1);
+}
+.card-title {
+  padding: 20px 0 15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-white);
+  font-family: "Poppins", sans-serif;
+}
+.btn {
+  background-color: #4b536b;
+  color: var(--color-white);
+}
+.btn:hover {
+  color: #ffffff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Nunito", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+.mainSection {
+  padding: 30px 0px;
+}
+button:active {
+  background-color: rgb(255, 255, 255) !important;
+}

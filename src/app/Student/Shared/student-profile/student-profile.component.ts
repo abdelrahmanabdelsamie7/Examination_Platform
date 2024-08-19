@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { ServiceAuthService } from 'src/app/service-auth.service';
 
 @Component({
   selector: 'app-student-profile',
@@ -8,7 +9,11 @@ import { Component } from '@angular/core';
 })
 export class StudentProfileComponent {
   studentData!: any;
-  constructor(private __HttpClient: HttpClient) {
+  constructor(
+    private __HttpClient: HttpClient,
+    private __ServiceAuthService: ServiceAuthService
+  ) {
+    this.__ServiceAuthService.authStudent();
     this.__HttpClient
       .get(
         `http://localhost:80/api/accounts/${localStorage.getItem(

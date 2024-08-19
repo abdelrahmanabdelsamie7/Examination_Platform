@@ -18,4 +18,10 @@ export class ServiceAuthService {
       this.__Router.navigateByUrl('/Login');
     }
   }
+  authStudent() {
+    if (localStorage.getItem('UserType') == 'student') {
+    } else {
+      this.__Router.navigateByUrl('/Login');
+    }
+  }
 }

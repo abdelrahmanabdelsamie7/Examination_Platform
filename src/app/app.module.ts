@@ -57,6 +57,7 @@ import { ShowChoiceComponent } from './Instructor/Choices/show-choice/show-choic
 import { ListStudentCoursesComponent } from './Student/StudentCourses/list-student-courses/list-student-courses.component';
 import { ExamPageComponent } from './Student/Exam/exam-page/exam-page.component';
 import { StudentExamsComponent } from './Student/Exam/student-exams/student-exams.component';
+import { ListResultsOfStudentsComponent } from './Instructor/Results/list-results-of-students/list-results-of-students.component';
 
 @NgModule({
   declarations: [
@@ -113,6 +114,8 @@ import { StudentExamsComponent } from './Student/Exam/student-exams/student-exam
     ListStudentCoursesComponent,
     ExamPageComponent,
     StudentExamsComponent,
+    ListResultsOfStudentsComponent,
+
   ],
   imports: [
     BrowserModule,

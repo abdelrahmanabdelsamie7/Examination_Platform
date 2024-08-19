@@ -1,0 +1,58 @@
+* {
+  list-style: none;
+}
+
+:root {
+  scroll-behavior: smooth;
+  --color-white: #c3c5ca;
+  --color-bg: #1c1e22 !important ;
+  --color-card: #4b536b !important ;
+  --color-hover: #4b536b !important ;
+  --color-bg-hover: #c3c5ca !important ;
+}
+
+.card {
+  position: relative;
+  transition: all .5s;
+  background-color: #1c1e22;
+  color: var(--color-white);
+  margin-bottom: 30px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0 30px rgba(208, 213, 223, 0.1);
+}
+
+.card-title {
+  padding: 20px 0 15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-white);
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+.card-body {
+  padding: 0 20px 20px 20px;
+}
+span {
+  background-color: var(--color-bg-hover) ;
+  color: #1c1e22;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: cursive;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  position: absolute;
+  right: 0 ;
+  top: 0;
+  border-bottom-left-radius: 70%;
+
+}
+.icons {
+  position: absolute;
+  bottom: 0;
+}
