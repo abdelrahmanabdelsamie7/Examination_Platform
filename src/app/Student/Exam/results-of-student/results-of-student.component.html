@@ -1,0 +1,47 @@
+<app-navbar-student></app-navbar-student>
+<app-aside-student></app-aside-student>
+<main id="main" class="main">
+  <div class="container mt-5">
+    <h3 class="fs-1 fw-bold text-center text-white-50 my-5">List Of Results</h3>
+    <div class="row">
+      <div class="col-md-12" *ngFor="let item of AllResults; index as i">
+        <div class="card">
+          <span>{{ i + 1 }}</span>
+          <div class="row">
+            <div class="col-md-4">
+              <h3>Exam :</h3>
+              <ul>
+                <li>Course : {{ item.exam.course_title }}</li>
+                <li>Exam Title : {{ item.exam.title }}</li>
+                <li>Exam Score : {{ item.exam.exam_score }}</li>
+                <li>Exam Question : {{ item.exam.exam_questions }}</li>
+                <li>Start Date : {{ item.exam.start_date }}</li>
+                <li>End Date : {{ item.exam.end_date }}</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5>
+                Instructor : {{ item.instructor.first_name }}
+                {{ item.instructor.second_name }}
+              </h5>
+            </div>
+            <div class="col-md-4">
+              <h3>
+                Student : {{ item.student.first_name }}
+                {{ item.student.second_name }}
+              </h3>
+              <ul>
+                <li>True Answers : {{ item.true_answers }}</li>
+                <li>
+                  False Answers :
+                  {{ item.exam.exam_questions - item.true_answers }}
+                </li>
+                <li class="fw-bold">Student Score : {{ item.score }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

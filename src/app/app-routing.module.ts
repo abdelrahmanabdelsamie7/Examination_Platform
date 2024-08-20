@@ -46,6 +46,7 @@ import { ListStudentCoursesComponent } from './Student/StudentCourses/list-stude
 import { ExamPageComponent } from './Student/Exam/exam-page/exam-page.component';
 import { StudentExamsComponent } from './Student/Exam/student-exams/student-exams.component';
 import { ListResultsOfStudentsComponent } from './Instructor/Results/list-results-of-students/list-results-of-students.component';
+import { ResultsOfStudentComponent } from './Student/Exam/results-of-student/results-of-student.component';
 
 const routes: Routes = [
   //  Login Page
@@ -145,7 +146,7 @@ const routes: Routes = [
   { path: 'Courses_Of_Student', component: ListStudentCoursesComponent },
   { path: 'Exams_Of_Student', component: StudentExamsComponent },
   { path: 'Exam_Page/:id/:exam_title', component: ExamPageComponent },
-
+  { path: 'Results_Student', component: ResultsOfStudentComponent },
   // ------------  End Student Permissions ------------
 
   // Student Page

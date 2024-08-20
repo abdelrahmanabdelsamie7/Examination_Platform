@@ -14,6 +14,7 @@ export class ExamPageComponent {
   date!: any;
   ExamInfo!: any;
   ExamData!: any;
+  disabledButtons: { [key: string]: boolean } = {};
   constructor(
     private __HttpClient: HttpClient,
     private __ActivatedRoute: ActivatedRoute,
@@ -61,5 +62,12 @@ export class ExamPageComponent {
         }
       )
       .subscribe((data: any) => {});
+    const key = `${QuestionId}-${ChoiceId}`;
+    this.disabledButtons[key] = true;
   }
+  isButtonDisabled(QuestionId: any, ChoiceId: any): boolean {
+    const key = `${QuestionId}-${ChoiceId}`;
+    return this.disabledButtons[key] || false;
+  }
+
 }

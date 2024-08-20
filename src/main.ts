@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
       body.classList.add('dark');
       for (let i = 0; i < cards.length; i++) {
         cards[i].classList.add('darkcard');
-
         buble.classList.add('light');
       }
     } else {
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
       for (let i = 0; i < cards.length; i++) {
         cards[i].classList.remove('darkcard');
       }
-
       buble.classList.remove('light');
     }
   });

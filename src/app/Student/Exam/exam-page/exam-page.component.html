@@ -35,12 +35,13 @@
           <li>
             {{ i + 1 }} -
             <button
-              
               id="btnAnswer"
               type="button"
               (click)="answer(ExamInfo.id, item.id, choice.id)"
+              #input
               class="btn px-4"
               value="{{ choice.text }}"
+              [disabled]="isButtonDisabled(item.id, choice.id)"
             >
               {{ choice.text }}
             </button>
@@ -49,6 +50,9 @@
       </div>
     </div>
   </div>
+  <button class="btn d-block mx-auto" routerLink="/Exams_Of_Student">
+    Out Of Exam
+  </button>
 </main>
 
 <!-- <div class="container my-5">

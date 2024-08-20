@@ -58,6 +58,7 @@ import { ListStudentCoursesComponent } from './Student/StudentCourses/list-stude
 import { ExamPageComponent } from './Student/Exam/exam-page/exam-page.component';
 import { StudentExamsComponent } from './Student/Exam/student-exams/student-exams.component';
 import { ListResultsOfStudentsComponent } from './Instructor/Results/list-results-of-students/list-results-of-students.component';
+import { ResultsOfStudentComponent } from './Student/Exam/results-of-student/results-of-student.component';
 
 @NgModule({
   declarations: [
@@ -115,6 +116,7 @@ import { ListResultsOfStudentsComponent } from './Instructor/Results/list-result
     ExamPageComponent,
     StudentExamsComponent,
     ListResultsOfStudentsComponent,
+    ResultsOfStudentComponent,
 
   ],
   imports: [

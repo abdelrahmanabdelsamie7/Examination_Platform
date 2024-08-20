@@ -3,13 +3,3 @@ i,
 a {
   cursor: pointer;
 }
-#buble {
-  font-size: 24px;
-
-  color: #fffcd3;
-  text-shadow: 2px 2px 5px #ffff00;
-}
-#buble.light {
-  color: #001440;
-  text-shadow: 2px 2px 5px #191970;
-}

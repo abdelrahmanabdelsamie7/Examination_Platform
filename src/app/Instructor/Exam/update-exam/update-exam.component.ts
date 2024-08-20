@@ -61,7 +61,7 @@ export class UpdateExamComponent {
         }
       )
       .subscribe((data: any) => {
-        // console.log(data);
+        console.log(data);
         this.__Router.navigateByUrl('/Exams');
       });
   }

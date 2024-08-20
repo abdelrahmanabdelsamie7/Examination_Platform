@@ -9,7 +9,9 @@ import { ServiceAuthService } from 'src/app/service-auth.service';
   styleUrls: ['./student-exams.component.css'],
 })
 export class StudentExamsComponent {
+  date: Date = new Date(); // Get the current date
   AllExams!: any;
+
   constructor(
     private __HttpClient: HttpClient,
     private __Router: Router,
@@ -21,8 +23,11 @@ export class StudentExamsComponent {
         headers: { Authorization: 'Bearer ' + localStorage.getItem('token') },
       })
       .subscribe((data: any) => {
-        // console.log(data);
         this.AllExams = data.results;
       });
+  }
+
+  isBeforeStartDate(startDate: string): boolean {
+    return this.date < new Date(startDate);
   }
 }

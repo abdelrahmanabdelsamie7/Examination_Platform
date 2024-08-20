@@ -28,11 +28,20 @@
             <td>{{ item.end_date | date : "MMM dd, yyyy 'at' hh:mm a" }}</td>
             <td>
               <a
+                *ngIf="!isBeforeStartDate(item.start_date); else outTemplate"
                 class="btn btn-outline-secondary"
                 routerLink="/Exam_Page/{{ item.id }}/{{ item.title }}"
               >
                 Start Exam
               </a>
+              <ng-template #outTemplate>
+                <a
+                  class="btn btn-outline-danger disabled"
+                  routerLink="/Exam_Page/{{ item.id }}/{{ item.title }}"
+                >
+                  Start Exam
+                </a>
+              </ng-template>
             </td>
           </tr>
         </tbody>
